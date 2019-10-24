@@ -10,9 +10,18 @@ exports.getById = (req, res) => {
     res.status(200).send(tarefa)
 }
 exports.getNome = (req, res) => {
-    console.log(req.url)
-        const nome = nomeColaborador.filter(nome => nome.nomeColaborador == "true")
-        nome.map(tarefas => nome.push(tarefas.nome))
-        
+    const nomeColaborador = req.params.nomeColaborador
+    const nome = tarefas.filter(nome => nome.nomeColaborador == nomeColaborador)
+    // nome.map(tarefas => nome.push(tarefas.nome))
+
     res.status(200).send(nome)
+    console.log(nome)
+}
+exports.getConcluidos = (req, res) => {
+    const concluido = req.params.concluido
+    const concluidos = tarefas.filter(e => e.concluido == "true")
+    // tarefa.map(tarefas => concluido.push(tarefas.concluido))
+
+    res.status(200).send(concluidos)
+    console.log(concluido)
 }

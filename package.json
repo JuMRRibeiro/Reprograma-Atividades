@@ -4,7 +4,7 @@
   "description": "N1 | BackEnd | 2019 | Semana 3 | Lógica 2",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {},
